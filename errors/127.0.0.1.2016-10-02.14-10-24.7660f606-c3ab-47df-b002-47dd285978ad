@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.TypeError'> not all arguments converted during string formatting"
+p3
+sS'layer'
+p4
+S'/opt/web2py/applications/storecall/models/dbChamadas.py'
+p5
+sS'code'
+p6
+S"\nChamadas = db.define_table('chamadas',\n    auth.signature,\n    Field('protocolo', 'string', label='Protocolo', default='0000/000000000'),\n    Field('data_acionamento', 'datetime', label='Acionado em:', default=datetime.datetime.today()),\n    Field('atendente_acionamento', 'reference auth_user', label='Atendente acionado: ', default=auth.user_id),\n    Field('data_protocolo', 'datetime', label='Protocolado em:', default=datetime.datetime.today()),\n    Field('atendente_protocolo', 'reference auth_user', label='Atendente do protocolo: '),\n    Field('identificador', 'string', label='Identificador(CPF/CNPJ)'),\n    Field('nome', 'string', label='Nome'),\n    Field('email', 'string', label='Email'),\n    Field('telefone', 'string', label='Telefone'),\n    Field('cep', 'string', label='CEP'),\n    Field('estado', 'list:reference estados', label='UF (ESTADO)'),\n    #Field('cidade', 'string', label='Local (munic\xc3\xadpio, cidade, estado)'),\n    Field('sistema', 'list:reference sistemas', label='Sistema'),\n    Field('demanda', 'text', label='Demanda'))\n\ndb.chamadas.protocolo.writable = False\n#db.chamadas.protocolo.readable = None\ndb.chamadas.data_acionamento.writable = False\n#db.chamadas.protocolo.readable = None\ndb.chamadas.data_protocolo.writable = False\ndb.chamadas.data_protocolo.readable = False\ndb.chamadas.atendente_acionamento.writable = False\ndb.chamadas.atendente_acionamento.readable = True   \ndb.chamadas.atendente_protocolo.writable = False\ndb.chamadas.atendente_protocolo.readable = False\n\nEstados = db.define_table('estados', ('Acre/AC','Alagoas/AL','Amap\xc3\xa1/AP','Amazonas/AM','Bahia/BA','Cear\xc3\xa1/CE','Distrito Federal/DF','Esp\xc3\xadrito Santo/ES','Goi\xc3\xa1s/GO','Maranh\xc3\xa3o/MA','Mato Grosso/MT','Mato Grosso do Sul/MS','Minas Gerais/MG','Par\xc3\xa1/PA','Para\xc3\xadba/PB','Paran\xc3\xa1/PR','Pernambuco/PE','Piau\xc3\xad/PI','Rio de Janeiro/RJ','Rio Grande do Norte/RN','Rio Grande do Sul/RS','Rond\xc3\xb4nia/RO','Roraima/RR','Santa Catarina/SC','S\xc3\xa3o Paulo/SP','Sergipe/SE','Tocantins/TO'))"
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/opt/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/opt/web2py/applications/storecall/models/dbChamadas.py", line 30, in <module>\n    Estados = db.define_table(\'estados\', (\'Acre/AC\',\'Alagoas/AL\',\'Amap\xc3\xa1/AP\',\'Amazonas/AM\',\'Bahia/BA\',\'Cear\xc3\xa1/CE\',\'Distrito Federal/DF\',\'Esp\xc3\xadrito Santo/ES\',\'Goi\xc3\xa1s/GO\',\'Maranh\xc3\xa3o/MA\',\'Mato Grosso/MT\',\'Mato Grosso do Sul/MS\',\'Minas Gerais/MG\',\'Par\xc3\xa1/PA\',\'Para\xc3\xadba/PB\',\'Paran\xc3\xa1/PR\',\'Pernambuco/PE\',\'Piau\xc3\xad/PI\',\'Rio de Janeiro/RJ\',\'Rio Grande do Norte/RN\',\'Rio Grande do Sul/RS\',\'Rond\xc3\xb4nia/RO\',\'Roraima/RR\',\'Santa Catarina/SC\',\'S\xc3\xa3o Paulo/SP\',\'Sergipe/SE\',\'Tocantins/TO\'))\n  File "/opt/web2py/gluon/packages/dal/pydal/base.py", line 834, in define_table\n    table = self.lazy_define_table(tablename,*fields,**args)\n  File "/opt/web2py/gluon/packages/dal/pydal/base.py", line 851, in lazy_define_table\n    table = table_class(self, tablename, *fields, **args)\n  File "/opt/web2py/gluon/packages/dal/pydal/objects.py", line 299, in __init__\n    field\nTypeError: not all arguments converted during string formatting\n'
+p11
+s.

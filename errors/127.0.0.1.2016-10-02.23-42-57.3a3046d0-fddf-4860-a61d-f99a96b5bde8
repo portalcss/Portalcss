@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.SyntaxError'> define_table argument is not a Field or Table: Nova chamada"
+p3
+sS'layer'
+p4
+S'/opt/web2py/applications/storecall/controllers/chamada.py'
+p5
+sS'code'
+p6
+S"def index():\n\tresponse.flash = T('Acionamentos')\n\treturn dict(message=T('Cadastre novos acionamentos'))\n#,fields=['protocolo','identificador','nome','email','telefone','cep','estado','sistema', 'data_acionamento', 'atendente_acionamento', 'atendente_protocolo', 'data_protocolo','demanda'],submit_button='Salvar'\n\n\ndef nova_chamada():\n\tform = SQLFORM.factory('Nova chamada',\n\t\tField('protocolo'),\n\t\tField('identificador' ),\n\t\tField('nome'),\n\t\tField('telefone'),\n\t\tField('cep'),\n\t\tField('estado'),\n\t\tField('data_acionamento'),\n\t\tField('atendente_acionamento'),\n\t\tField('data_protocolo'),\n\t\tField('demanda')\n\t\t)\n\n\n\t#form = SQLFORM(Chamadas)\n\tif form.process().accepted:\n\t\tsession.flash = 'Novo acionamento registrado: %s' % form.vars.identificador\n\t\tredirect(URL('nova_chamada'))\n\telif form.errors:\n\t\tresponse.flash = 'Erros no formul\xc3\xa1rio!'\n\telse:\n\t\tif  not response.flash:\n\t\t\tresponse.flash = 'Preencha o formul\xc3\xa1rio!'\n\treturn dict(form=form)\n\ndef nova_chamadax():\n\tif form.process().accepted:\n\t\tsession.flash = 'Novo acionamento registrado: %s' % form.vars.identificador\n\t\tredirect(URL('nova_chamada'))\n\telif form.errors:\n\t\tresponse.flash = 'Erros no formul\xc3\xa1rio!'\n\telse:\n\t\tif  not response.flash:\n\t\t\tresponse.flash = 'Preencha o formul\xc3\xa1rio!'\n\treturn dict(form=form)\n\n\n \ndef ver_chamada():\n\tgrid = SQLFORM.grid(Chamadas)\n\treturn dict(grid=grid)\n\t\nresponse._vars=response._caller(nova_chamada)\n"
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/opt/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/opt/web2py/applications/storecall/controllers/chamada.py", line 50, in <module>\n  File "/opt/web2py/gluon/globals.py", line 417, in <lambda>\n    self._caller = lambda f: f()\n  File "/opt/web2py/applications/storecall/controllers/chamada.py", line 18, in nova_chamada\n    Field(\'demanda\')\n  File "/opt/web2py/gluon/sqlhtml.py", line 1808, in factory\n    return SQLFORM(DAL(None).define_table(table_name, *fields),\n  File "/opt/web2py/gluon/packages/dal/pydal/base.py", line 834, in define_table\n    table = self.lazy_define_table(tablename,*fields,**args)\n  File "/opt/web2py/gluon/packages/dal/pydal/base.py", line 851, in lazy_define_table\n    table = table_class(self, tablename, *fields, **args)\n  File "/opt/web2py/gluon/packages/dal/pydal/objects.py", line 299, in __init__\n    field\nSyntaxError: define_table argument is not a Field or Table: Nova chamada\n'
+p11
+s.

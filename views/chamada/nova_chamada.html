@@ -1,0 +1,65 @@
+{{extend 'index.html'}}
+<h1>Registrar chamadas</h1>
+{{=form}}
+
+{{'''}}
+{{=form.custom.begin}}
+<!--Protocolo -->
+{{form.elements('#chamadas_protocolo')[0]['_placerholder'] = "Protocolo"}}
+{{form.elements('#chamadas_protocolo')[0]['_disabled'] = "true"}}
+{{=LABEL('Protocolo: ', _class='test', _id='protocolo')}}
+{{=form.custom.widget.protocolo}}
+<!--data_acionamento-->
+{{form.elements('#chamadas_data_acionamento')[0]['_placerholder'] = "00/00/00"}}
+{{form.elements('#chamadas_data_acionamento')[0]['_disabled'] = "true"}}
+{{=LABEL('Data acionamento: ', _class='test', _id='data_acionamento')}}
+{{=form.custom.widget.data_acionamento}}
+<!--atendente_acionamento-->
+{{form.elements('#chamadas_atendente_acionamento')[0]['_placerholder'] = "Nome"}}
+{{form.elements('#chamadas_atendente_acionamento')[0]['_disabled'] = "true"}}
+{{=LABEL('Atendente acionamento: ', _class='test', _id='atendente_acionamento')}}
+{{=form.custom.widget.atendente_acionamento}}
+<!--data_protocolo-->
+{{form.elements('#chamadas_data_protocolo')[0]['_placerholder'] = "Data:"}}
+{{form.elements('#chamadas_data_protocolo')[0]['_disabled'] = "true"}}
+{{=LABEL('Data protocolo: ', _class='test', _id='data_protocolo')}}
+{{=form.custom.widget.data_protocolo}}
+<!--atendente_protocolo-->
+{{form.elements('#chamadas_atendente_protocolo')[0]['_placerholder'] = "Nome"}}
+{{form.elements('#chamadas_atendente_protocolo')[0]['_disabled'] = "true"}}
+{{=LABEL('Atendente protocolo: ', _class='test', _id='atendente_protocolo')}}
+{{=form.custom.widget.atendente_protocolo}}
+<!--Nome -->
+{{form.elements('#chamadas_nome')[0]['_placerholder'] = "nome"}}
+{{=LABEL('Nome: ', _class='test', _id='nome')}}
+{{=form.custom.widget.nome}}
+<!--Email -->
+{{form.elements('#chamadas_email')[0]['_placerholder'] = "email"}}
+{{form.elements('#chamadas_email')[0]['_type'] = "email"}}
+{{=LABEL('Email: ', _class='test', _id='email')}}
+{{=form.custom.widget.email}}
+<!--Telefone -->
+{{form.elements('#chamadas_telefone')[0]['_placeholder'] = "DDD + Número"}}
+{{form.elements('#chamadas_telefone')[0]['_type'] = "tel"}}
+{{=LABEL('Telefone: ', _class='test', _id='telefone')}}
+{{=form.custom.widget.telefone}}
+<!--CEP -->
+{{form.elements('#chamadas_cep')[0]['_placerholder'] = "cep"}}
+{{=LABEL('CEP: ', _class='test', _id='cep')}}
+{{=form.custom.widget.cep}}
+<!--Estado -->
+{{form.elements('#chamadas_estado')[0]['_placerholder'] = "Estado"}}
+{{=LABEL('Estado: ', _class='test', _id='estado')}}
+{{=form.custom.widget.estado}}
+<!--Sistema -->
+{{form.elements('#chamadas_sistema')[0]['_placerholder'] = "Sistema"}}
+{{=LABEL('Sistema: ', _class='test', _id='sistema')}}
+{{=form.custom.widget.sistema}}
+<!--Demanda -->
+{{form.elements('#chamadas_demanda')[0]['_placerholder'] = "Demanda"}}
+{{=LABEL('Demanda: ', _class='test', _id='demanda')}}
+{{=form.custom.widget.demanda}}
+
+{{=form.custom.submit}}
+{{=form.custom.end}}
+{{'''}}

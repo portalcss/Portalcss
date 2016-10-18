@@ -1,0 +1,48 @@
+{{extend 'layout.html'}}
+{{#implementar cores para alerta de dias na tabela!!!!# cada cor representará um dia (verde primeiro dia, amarelo segundo dia, vermelho terceiro dia ou mais)}}
+<div class="table table-responsive">
+<table class="table table-bordered">
+  <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>Protocolo</th>
+      <th>Atendente Acionamento</th>
+      <th>Data Protocolo</th>
+      <th>Identificador</th>
+      <th>Sistema</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+	{{for row in rows:}}
+	    <tr>
+	      <th scope="row">{{=row.id}}</th>
+	      <td>{{=row.protocolo}}</td>
+	      <td>{{=row.atendente_acionamento}}</td>
+	      <td>{{=row.data_protocolo}}</td>
+	      <td>{{=row.identificador}}</td>
+	      <td>{{=row.sistema}}</td>
+	    </tr>
+	{{pass}}
+  </tbody>
+
+
+
+</table>
+	{{if page:}}
+		<a href="{{=URL(args=[page-1])}}">Voltar</a>
+	{{pass}}
+	{{if len(rows)>items_per_page:}}
+		<a href="{{=URL(args=[page+1])}}">Avançar</a>
+	{{pass}}
+</div>
+  
+
+
+
+ 
+
+
+{{'''=rows'''}}
